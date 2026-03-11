@@ -9,6 +9,7 @@ const connectDB = async () => {
       process.env.MONGODB_URI || "mongodb://localhost:27017/ecommerce",
     );
     console.log(`MongoDB Connected: ${conn.connection.host}`);
+    console.log(`Using Database: ${conn.connection.name}`);
   } catch (error: any) {
     console.error(`Error: ${error.message}`);
     process.exit(1);
