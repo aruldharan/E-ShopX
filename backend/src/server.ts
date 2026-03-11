@@ -93,7 +93,8 @@ if (process.env.NODE_ENV === "production") {
   const frontendPath = path.join(__dirname, "../../frontend/dist");
   app.use(express.static(frontendPath));
 
-  app.get("(.*)", (req: Request, res: Response) => {
+  // Catch-all route to serve the SPA
+  app.use((req: Request, res: Response) => {
     res.sendFile(path.resolve(frontendPath, "index.html"));
   });
 } else {
