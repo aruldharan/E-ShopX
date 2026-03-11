@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 dotenv.config();
 
 const MONGO_URI =
-  process.env.MONGO_URI || "mongodb://localhost:27017/ecommerce";
+  process.env.MONGODB_URI || "mongodb://localhost:27017/ecommerce";
 
 import User from "../models/User";
 import Category from "../models/Category";
